@@ -42,10 +42,11 @@
     .expert-name { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 8px; }
     .expert-title { font-size: 1rem; color: #aaa; margin-bottom: 28px; font-style: italic; }
     .expert-divider { width: 80px; height: 2px; background: linear-gradient(to right, #C9A84C, #f5d78e, #C9A84C); margin-bottom: 28px; }
-    .accred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
-    .accred-item { display: flex; align-items: center; gap: 10px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: 6px; padding: 10px 14px; }
-    .accred-icon { font-size: 1.1rem; flex-shrink: 0; }
-    .accred-text { font-size: 0.8rem; font-weight: 600; color: #ddd; line-height: 1.3; }
+    .expert-bio { color: #bbb; font-size: 0.95rem; line-height: 1.75; margin-bottom: 24px; }
+    .expert-cert-badge { display: flex; align-items: center; gap: 14px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 14px 20px; margin-bottom: 32px; }
+    .cert-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .cert-text { font-size: 0.9rem; color: #ddd; line-height: 1.4; }
+    .cert-text strong { color: var(--gold); font-size: 1rem; display: block; margin-bottom: 2px; }
     .expert-cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #C9A84C, #f5d78e, #C9A84C); color: #0a0a0a; font-weight: 800; font-size: 0.95rem; padding: 14px 28px; border-radius: 6px; text-decoration: none; }
     .trust-bar { background: #fff; border-bottom: 1px solid #e5e9ef; padding: 20px 40px; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
     .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; color: var(--navy); }
@@ -112,7 +113,6 @@
       .expert-inner { flex-direction: column; gap: 32px; }
       .expert-photo-wrap { width: 100%; }
       .expert-photo-placeholder, .expert-photo { width: 100%; height: 280px; }
-      .accred-grid { grid-template-columns: 1fr; }
       .expert-name { font-size: 2rem; }
     }
     @media (max-width: 700px) { nav { padding: 14px 20px; } section { padding: 52px 20px; } .price-grid { grid-template-columns: 1fr; } .location-grid { grid-template-columns: 1fr; } .trust-bar { padding: 16px 20px; gap: 20px; } }
@@ -160,24 +160,17 @@
   <section class="expert-section">
     <div class="expert-inner">
       <div class="expert-photo-wrap">
-        <!-- TO ADD PHOTO: replace the div below with <img class="expert-photo" src="YOUR_PHOTO_URL" alt="Master Estefany Ruiz"> -->
-        <div class="expert-photo-placeholder">
-          <span class="monogram">E</span>
-        </div>
+        <img class="expert-photo" src="https://d2ol7oe51mr4n9.cloudfront.net/user_3DltPRqzBm2OiofN6qI8adrLC4u/00e60bb0-7620-499a-9d7c-1e0ab85d5796.png" alt="Master Estefany Ruiz – SMP Specialist at New City Medical Plaza Tijuana">
       </div>
       <div class="expert-info">
         <div class="expert-eyebrow">Your SMP Specialist</div>
         <h2 class="expert-name">Master Estefany Ruiz</h2>
         <p class="expert-title">Scalp Micropigmentation Specialist · New City Medical Plaza, Tijuana</p>
         <div class="expert-divider"></div>
-        <div class="accred-grid">
-          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">International SMP Academy</span></div>
-          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Society of Scalp Micropigmentation</span></div>
-          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">European Pigmentation Academy</span></div>
-          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Hair Loss Congress Certified</span></div>
-          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Scalp Aesthetics Institute</span></div>
-          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Medical Micropigmentation Specialist</span></div>
-          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Int'l Permanent Makeup Association</span></div>
+        <p class="expert-bio">Internationally trained and recognized across leading micropigmentation academies, Master Estefany combines refined technique with a meticulous eye for natural-looking results — all delivered inside one of Tijuana's most trusted medical facilities.</p>
+        <div class="expert-cert-badge">
+          <span class="cert-icon">🏅</span>
+          <span class="cert-text"><strong>7 International Certifications</strong>in Scalp Micropigmentation &amp; Advanced Pigmentation Techniques</span>
         </div>
         <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20to%20book%20with%20Master%20Estefany" class="expert-cta" target="_blank" rel="noopener">
           📲 Book with Master Estefany
