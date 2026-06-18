@@ -1,4 +1,4 @@
-<!-- TEST --><!DOCTYPE html>
+<!-- SMP TIJUANA v2 --><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,155 +6,53 @@
   <title>SMP Tijuana | Scalp Micropigmentation – Steps from San Diego</title>
   <meta name="description" content="World-class Scalp Micropigmentation in Tijuana, Mexico. From $699 USD. 5 minutes from San Ysidro border crossing. Free consultation. New City Medical Plaza." />
   <meta name="keywords" content="scalp micropigmentation Tijuana, SMP Tijuana, hair loss treatment Tijuana, scalp micropigmentation near San Diego, affordable SMP" />
-
-  <!-- Open Graph for social sharing -->
   <meta property="og:title" content="SMP Tijuana – Save Up to $3,500 vs. US Prices" />
   <meta property="og:description" content="Professional scalp micropigmentation in Tijuana from $699 USD. 5 min from San Diego border. Free consultation." />
   <meta property="og:type" content="website" />
-
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --gold: #C9A84C;
-      --dark: #0F1B2D;
-      --navy: #1F3864;
-      --light-bg: #F5F7FA;
-      --text: #222;
-      --muted: #666;
-    }
-
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.6;
-    }
-
-    /* TOP BAR */
-    .topbar {
-      background: var(--gold);
-      color: #fff;
-      text-align: center;
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
-    /* NAV */
-    nav {
-      background: var(--dark);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .logo { font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: 1px; }
+    :root { --gold: #C9A84C; --dark: #0F1B2D; --navy: #1F3864; --light-bg: #F5F7FA; --text: #222; --muted: #666; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: #fff; line-height: 1.6; }
+    .topbar { background: var(--gold); color: #fff; text-align: center; padding: 10px 20px; font-size: 0.9rem; font-weight: 600; }
+    nav { background: var(--dark); display: flex; justify-content: space-between; align-items: center; padding: 16px 40px; position: sticky; top: 0; z-index: 100; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: #fff; }
     .logo span { color: var(--gold); }
-    .nav-cta {
-      background: var(--gold); color: #fff; padding: 10px 24px; border-radius: 6px;
-      font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: background 0.2s;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative; background: #0a0a0a; color: #fff;
-      min-height: 600px; display: flex; align-items: center; overflow: hidden; padding: 0;
-    }
-    .hero-portrait {
-      position: absolute; right: 0; top: 0; width: 62%; height: 100%;
-      object-fit: cover; object-position: center top; z-index: 1;
-    }
-    .hero-overlay {
-      position: absolute; left: 0; top: 0; width: 70%; height: 100%;
-      background: linear-gradient(to right, #0a0a0a 50%, transparent 100%); z-index: 2;
-    }
-    .hero-content {
-      position: relative; z-index: 3; padding: 60px 40px; max-width: 540px;
-    }
-    .hero-service {
-      font-size: 20px; font-weight: 900; letter-spacing: 4px;
-      text-transform: uppercase; line-height: 1.3; color: #fff;
-    }
-    .hero-divider {
-      width: 100px; height: 2px;
-      background: linear-gradient(to right, #C9A84C, #f5d78e, #C9A84C);
-      margin: 14px 0 18px;
-    }
-    .hero-price {
-      font-size: 108px; font-weight: 900; line-height: 1;
-      background: linear-gradient(180deg, #f5d78e 0%, #C9A84C 40%, #8B6914 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; letter-spacing: -4px;
-      filter: drop-shadow(0 4px 12px rgba(180,130,30,0.4));
-    }
-    .hero-currency {
-      font-size: 40px; vertical-align: super;
-      background: linear-gradient(180deg, #f5d78e 0%, #C9A84C 40%, #8B6914 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-usd {
-      font-size: 24px; font-weight: 700; color: #999;
-      letter-spacing: 6px; margin-top: -8px; margin-bottom: 18px;
-    }
-    .hero-promo {
-      display: inline-block;
-      background: linear-gradient(135deg, #C9A84C, #f5d78e, #C9A84C);
-      color: #0a0a0a; font-size: 14px; font-weight: 900;
-      letter-spacing: 2px; text-transform: uppercase;
-      padding: 10px 22px; margin-bottom: 20px;
-    }
-    .hero-sub {
-      font-size: 13px; color: #aaa; margin-bottom: 28px; line-height: 1.6;
-    }
-    @media (max-width: 680px) {
-      .hero { flex-direction: column; min-height: auto; align-items: stretch; }
-      .hero-portrait {
-        position: relative; width: 100%; height: 340px;
-        object-fit: cover; object-position: center 15%; opacity: 1; z-index: 1;
-      }
-      .hero-overlay { display: none; }
-      .hero-content {
-        position: relative; z-index: 3; max-width: 100%;
-        padding: 36px 24px 40px; text-align: center; background: #0a0a0a;
-      }
-      .hero-divider { margin: 14px auto 18px; }
-      .hero-price { font-size: 84px; }
-      .hero-promo { display: block; text-align: center; }
-      .hero-cta-group { flex-direction: column; align-items: center; gap: 12px; }
-      .btn-primary, .btn-secondary { width: 100%; max-width: 300px; text-align: center; }
-    }
-    .badge {
-      display: inline-block; background: var(--gold); color: #fff; padding: 6px 18px;
-      border-radius: 30px; font-size: 0.82rem; font-weight: 700; letter-spacing: 1px;
-      text-transform: uppercase; margin-bottom: 24px;
-    }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
-    .hero h1 em { color: var(--gold); font-style: normal; }
-    .hero p { font-size: 1.15rem; color: #ccd8ec; max-width: 600px; margin: 0 auto 36px; }
-    .btn-primary {
-      background: var(--gold); color: #fff; padding: 16px 36px; border-radius: 8px;
-      font-size: 1.1rem; font-weight: 800; text-decoration: none; display: inline-block;
-    }
-    .btn-secondary {
-      background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4);
-      padding: 16px 36px; border-radius: 8px; font-size: 1.05rem; font-weight: 600;
-      text-decoration: none; display: inline-block;
-    }
-    .trust-bar {
-      background: #fff; border-bottom: 1px solid #e5e9ef; padding: 20px 40px;
-      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-    }
+    .nav-cta { background: var(--gold); color: #fff; padding: 10px 24px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+    .hero { position: relative; background: #0a0a0a; color: #fff; min-height: 600px; display: flex; align-items: center; overflow: hidden; padding: 0; }
+    .hero-portrait { position: absolute; right: 0; top: 0; width: 62%; height: 100%; object-fit: cover; object-position: center top; z-index: 1; }
+    .hero-overlay { position: absolute; left: 0; top: 0; width: 70%; height: 100%; background: linear-gradient(to right, #0a0a0a 50%, transparent 100%); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; padding: 60px 40px; max-width: 540px; }
+    .hero-service { font-size: 20px; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; line-height: 1.3; color: #fff; }
+    .hero-divider { width: 100px; height: 2px; background: linear-gradient(to right, #C9A84C, #f5d78e, #C9A84C); margin: 14px 0 18px; }
+    .hero-price { font-size: 108px; font-weight: 900; line-height: 1; background: linear-gradient(180deg, #f5d78e 0%, #C9A84C 40%, #8B6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -4px; filter: drop-shadow(0 4px 12px rgba(180,130,30,0.4)); }
+    .hero-currency { font-size: 40px; vertical-align: super; background: linear-gradient(180deg, #f5d78e 0%, #C9A84C 40%, #8B6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-usd { font-size: 24px; font-weight: 700; color: #999; letter-spacing: 6px; margin-top: -8px; margin-bottom: 18px; }
+    .hero-promo { display: inline-block; background: linear-gradient(135deg, #C9A84C, #f5d78e, #C9A84C); color: #0a0a0a; font-size: 14px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; padding: 10px 22px; margin-bottom: 20px; }
+    .hero-sub { font-size: 13px; color: #aaa; margin-bottom: 28px; line-height: 1.6; }
+    .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+    .expert-section { background: #0a0a0a; color: #fff; padding: 80px 40px; border-top: 1px solid rgba(201,168,76,0.2); }
+    .expert-inner { display: flex; align-items: center; gap: 64px; max-width: 1060px; margin: 0 auto; }
+    .expert-photo-wrap { flex-shrink: 0; width: 320px; }
+    .expert-photo-placeholder { width: 320px; height: 400px; background: linear-gradient(160deg, #181818 0%, #2a2a2a 100%); border: 2px solid rgba(201,168,76,0.4); border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .expert-photo-placeholder::before { content: ''; position: absolute; top: -60px; left: -60px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); }
+    .expert-photo-placeholder .monogram { font-size: 96px; font-weight: 900; background: linear-gradient(180deg, #f5d78e 0%, #C9A84C 50%, #8B6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: Georgia, serif; z-index: 1; }
+    .expert-photo { width: 320px; height: 400px; object-fit: cover; object-position: center top; border: 2px solid rgba(201,168,76,0.4); border-radius: 4px; display: block; }
+    .expert-info { flex: 1; }
+    .expert-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .expert-name { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 8px; }
+    .expert-title { font-size: 1rem; color: #aaa; margin-bottom: 28px; font-style: italic; }
+    .expert-divider { width: 80px; height: 2px; background: linear-gradient(to right, #C9A84C, #f5d78e, #C9A84C); margin-bottom: 28px; }
+    .accred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
+    .accred-item { display: flex; align-items: center; gap: 10px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-radius: 6px; padding: 10px 14px; }
+    .accred-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .accred-text { font-size: 0.8rem; font-weight: 600; color: #ddd; line-height: 1.3; }
+    .expert-cta { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #C9A84C, #f5d78e, #C9A84C); color: #0a0a0a; font-weight: 800; font-size: 0.95rem; padding: 14px 28px; border-radius: 6px; text-decoration: none; }
+    .trust-bar { background: #fff; border-bottom: 1px solid #e5e9ef; padding: 20px 40px; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
     .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 600; color: var(--navy); }
     section { padding: 72px 40px; }
     .container { max-width: 1060px; margin: 0 auto; }
     .section-title { text-align: center; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; color: var(--navy); margin-bottom: 12px; }
-    .section-sub { text-align: center; color: var(--muted); font-size: 1.05rem; margin-bottom: 52px; }s-callout p { font-size: 1.05rem; color: #ccd8ec; margin-top: 4px; }
-
+    .section-sub { text-align: center; color: var(--muted); font-size: 1.05rem; margin-bottom: 52px; }
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; }
     .step { background: #fff; border-radius: 12px; padding: 32px 24px; text-align: center; border: 1px solid #e5e9ef; }
     .step-num { width: 48px; height: 48px; background: var(--gold); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 900; margin: 0 auto 16px; }
@@ -183,7 +81,41 @@
     .cta-section { background: linear-gradient(135deg, var(--navy), #2a4070); color: #fff; text-align: center; padding: 80px 40px; }
     .wa-float { position: fixed; bottom: 28px; right: 28px; background: #25D366; color: #fff; border-radius: 50px; padding: 14px 24px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); display: flex; align-items: center; gap: 10px; z-index: 200; }
     footer { background: var(--dark); color: #5a7090; text-align: center; padding: 32px 40px; font-size: 0.85rem; }
-    @media (max-width: 700px) { nav { padding: 14px 20px; } .hero { padding: 60px 20px 50px; } section { padding: 52px 20px; } .price-grid { grid-template-columns: 1fr; } .location-grid { grid-template-columns: 1fr; } }
+    .price-section { background: var(--light-bg); }
+    .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 40px; }
+    .price-card { background: #fff; border-radius: 16px; padding: 36px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .price-card.featured { background: var(--dark); color: #fff; border: 2px solid var(--gold); }
+    .featured-badge { display: inline-block; background: var(--gold); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; }
+    .price-card .label { font-size: 0.9rem; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+    .price-card.featured .label { color: #9ab0cc; }
+    .price-card .amount { font-size: 3rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .price-card.featured .amount { color: var(--gold); }
+    .price-card .sub { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+    .price-card.featured .sub { color: #9ab0cc; }
+    .price-card .location { font-size: 0.85rem; margin-top: 12px; color: var(--muted); }
+    .price-card.featured .location { color: #6a88aa; }
+    .savings-callout { background: linear-gradient(135deg, var(--dark), #1a2f50); color: #fff; border-radius: 16px; padding: 36px 40px; text-align: center; }
+    .savings-callout .big { font-size: 2rem; font-weight: 900; color: var(--gold); margin-bottom: 12px; }
+    .btn-primary { background: var(--gold); color: #fff; padding: 16px 36px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; text-decoration: none; display: inline-block; }
+    .btn-secondary { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); padding: 16px 36px; border-radius: 8px; font-size: 1.05rem; font-weight: 600; text-decoration: none; display: inline-block; }
+    @media (max-width: 680px) {
+      .hero { flex-direction: column; min-height: auto; align-items: stretch; }
+      .hero-portrait { position: relative; width: 100%; height: 340px; object-fit: cover; object-position: center 15%; opacity: 1; z-index: 1; }
+      .hero-overlay { display: none; }
+      .hero-content { position: relative; z-index: 3; max-width: 100%; padding: 36px 24px 40px; text-align: center; background: #0a0a0a; }
+      .hero-divider { margin: 14px auto 18px; }
+      .hero-price { font-size: 84px; }
+      .hero-promo { display: block; text-align: center; }
+      .hero-cta-group { flex-direction: column; align-items: center; gap: 12px; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 300px; text-align: center; }
+      .expert-section { padding: 52px 24px; }
+      .expert-inner { flex-direction: column; gap: 32px; }
+      .expert-photo-wrap { width: 100%; }
+      .expert-photo-placeholder, .expert-photo { width: 100%; height: 280px; }
+      .accred-grid { grid-template-columns: 1fr; }
+      .expert-name { font-size: 2rem; }
+    }
+    @media (max-width: 700px) { nav { padding: 14px 20px; } section { padding: 52px 20px; } .price-grid { grid-template-columns: 1fr; } .location-grid { grid-template-columns: 1fr; } .trust-bar { padding: 16px 20px; gap: 20px; } }
   </style>
 </head>
 <body>
@@ -198,31 +130,61 @@
   </nav>
 
   <section class="hero">
-  <img class="hero-portrait"
-    src="https://d8j0ntlcm91z4.cloudfront.net/user_3DltPRqzBm2OiofN6qI8adrLC4u/hf_20260618_021636_e8d3fae7-5925-409f-823a-ce59fc49e7e2.png"
-    alt="Scalp micropigmentation result" />
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <div class="hero-service">Scalp<br>Micropigmentation</div>
-    <div class="hero-divider"></div>
-    <div class="hero-price"><span class="hero-currency">$</span>699</div>
-    <div class="hero-usd">USD</div>
-    <div class="hero-promo">Father's Day Special</div>
-    <p class="hero-sub">📍 New City Medical Plaza · Tijuana &nbsp;|&nbsp; 5 min from San Diego<br>Save up to $3,500 vs. US prices</p>
-    <div class="hero-cta-group">
-      <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" target="_blank" rel="noopener">📲 Book Free Consultation</a>
-      <a href="#pricing" class="btn-secondary">See Pricing →</a>
+    <img class="hero-portrait"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_3DltPRqzBm2OiofN6qI8adrLC4u/hf_20260618_021636_e8d3fae7-5925-409f-823a-ce59fc49e7e2.png"
+      alt="Scalp micropigmentation result" />
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-service">Scalp<br>Micropigmentation</div>
+      <div class="hero-divider"></div>
+      <div class="hero-price"><span class="hero-currency">$</span>699</div>
+      <div class="hero-usd">USD</div>
+      <div class="hero-promo">Father's Day Special</div>
+      <p class="hero-sub">📍 New City Medical Plaza · Tijuana &nbsp;|&nbsp; 5 min from San Diego<br>Save up to $3,500 vs. US prices</p>
+      <div class="hero-cta-group">
+        <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" target="_blank" rel="noopener">📲 Book Free Consultation</a>
+        <a href="#pricing" class="btn-secondary">See Pricing →</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <div class="trust-bar">
-    <div class="trust-item"><span class="icon">🏥</span> Certified Medical Facility</div>
-    <div class="trust-item"><span class="icon">🇺🇸</span> 5 Min from San Ysidro</div>
-    <div class="trust-item"><span class="icon">✅</span> No Surgery · No Downtime</div>
-    <div class="trust-item"><span class="icon">💬</span> English-Speaking Staff</div>
-    <div class="trust-item"><span class="icon">⭐</span> Free Consultation</div>
+    <div class="trust-item"><span>🏥</span> Certified Medical Facility</div>
+    <div class="trust-item"><span>🇺🇸</span> 5 Min from San Ysidro</div>
+    <div class="trust-item"><span>✅</span> No Surgery · No Downtime</div>
+    <div class="trust-item"><span>💬</span> English-Speaking Staff</div>
+    <div class="trust-item"><span>⭐</span> Free Consultation</div>
   </div>
+
+  <!-- MASTER ESTEFANY RUIZ -->
+  <section class="expert-section">
+    <div class="expert-inner">
+      <div class="expert-photo-wrap">
+        <!-- TO ADD PHOTO: replace the div below with <img class="expert-photo" src="YOUR_PHOTO_URL" alt="Master Estefany Ruiz"> -->
+        <div class="expert-photo-placeholder">
+          <span class="monogram">E</span>
+        </div>
+      </div>
+      <div class="expert-info">
+        <div class="expert-eyebrow">Your SMP Specialist</div>
+        <h2 class="expert-name">Master Estefany Ruiz</h2>
+        <p class="expert-title">Scalp Micropigmentation Specialist · New City Medical Plaza, Tijuana</p>
+        <div class="expert-divider"></div>
+        <div class="accred-grid">
+          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">International SMP Academy</span></div>
+          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Society of Scalp Micropigmentation</span></div>
+          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">European Pigmentation Academy</span></div>
+          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Hair Loss Congress Certified</span></div>
+          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Scalp Aesthetics Institute</span></div>
+          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Medical Micropigmentation Specialist</span></div>
+          <div class="accred-item"><span class="accred-icon">🏅</span><span class="accred-text">Int'l Permanent Makeup Association</span></div>
+        </div>
+        <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20to%20book%20with%20Master%20Estefany" class="expert-cta" target="_blank" rel="noopener">
+          📲 Book with Master Estefany
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- REAL RESULTS -->
   <section style="padding: 64px 40px; background: #fff;">
@@ -282,10 +244,11 @@
           <div class="fact"><div class="icon-wrap">📍</div><div><h4>New City Medical Plaza</h4><p>Interior 708, Piso 7. The premier medical building in Tijuana — and the closest certified clinic complex to the United States.</p></div></div>
           <div class="fact"><div class="icon-wrap">🚗</div><div><h4>5 Minutes from San Ysidro</h4><p>Drive across the border or park on the US side and walk. Minutes from the busiest border crossing in the world.</p></div></div>
           <div class="fact"><div class="icon-wrap">🌆</div><div><h4>20 Minutes from Downtown San Diego</h4><p>Easy day trip. Come in the morning, leave looking great by afternoon.</p></div></div>
-          <div class="fact"><div class="icon-wrap">🔒</div><div><h4>Safe & Certified Medical Facility</h4><p>New City Medical Plaza is a certified medical complex with strict hygiene and safety standards.</p></div></div>
+          <div class="fact"><div class="icon-wrap">🔒</div><div><h4>Safe &amp; Certified Medical Facility</h4><p>New City Medical Plaza is a certified medical complex with strict hygiene and safety standards.</p></div></div>
         </div>
         <div class="map-placeholder">
-          <div class="address-block"><strong>📍 Our Location</strong>New City Medical Plaza<br>Interior 708, Piso 7<br>Tijuana, Baja California, Mexico</div>
+          <div style="font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:12px;">📍 Our Location</div>
+          <div style="color:#9ab0cc; font-size:0.95rem; line-height:1.8;">New City Medical Plaza<br>Interior 708, Piso 7<br>Tijuana, Baja California, Mexico</div>
           <a href="https://maps.google.com?q=New+City+Medical+Plaza+Tijuana" class="directions-btn" target="_blank">🗺️ Get Directions</a>
         </div>
       </div>
@@ -297,12 +260,12 @@
       <h2 class="section-title">Why Choose SMP Tijuana?</h2>
       <p class="section-sub">Everything US clients look for — at a fraction of the cost</p>
       <div class="why-grid">
-        <div class="why-card"><div class="icon">💰</div><h3>Up to 80% Less Than US Prices</h3><p>Same professional equipment, same technique, dramatically lower overhead.</p></div>
-        <div class="why-card"><div class="icon">🏥</div><h3>Certified Medical Building</h3><p>We operate inside New City Medical Plaza — a regulated, professional medical complex.</p></div>
-        <div class="why-card"><div class="icon">🌐</div><h3>English-Speaking Team</h3><p>Our staff speaks English fluently. No language barrier, no confusion.</p></div>
-        <div class="why-card"><div class="icon">⚡</div><h3>No Surgery. No Downtime.</h3><p>Walk in, walk out. Scalp micropigmentation is non-invasive.</p></div>
-        <div class="why-card"><div class="icon">🎯</div><h3>Natural-Looking Results</h3><p>Precision micro-dots that replicate real hair follicles.</p></div>
-        <div class="why-card"><div class="icon">📲</div><h3>Free Consultation First</h3><p>We never pressure you into a session.</p></div>
+        <div class="why-card"><div>💰</div><h3>Up to 80% Less Than US Prices</h3><p>Same professional equipment, same technique, dramatically lower overhead.</p></div>
+        <div class="why-card"><div>🏥</div><h3>Certified Medical Building</h3><p>We operate inside New City Medical Plaza — a regulated, professional medical complex.</p></div>
+        <div class="why-card"><div>🌐</div><h3>English-Speaking Team</h3><p>Our staff speaks English fluently. No language barrier, no confusion.</p></div>
+        <div class="why-card"><div>⚡</div><h3>No Surgery. No Downtime.</h3><p>Walk in, walk out. Scalp micropigmentation is non-invasive.</p></div>
+        <div class="why-card"><div>🎯</div><h3>Natural-Looking Results</h3><p>Precision micro-dots that replicate real hair follicles.</p></div>
+        <div class="why-card"><div>📲</div><h3>Free Consultation First</h3><p>We never pressure you into a session.</p></div>
       </div>
     </div>
   </section>
@@ -333,8 +296,8 @@
 
   <section class="cta-section">
     <div class="container">
-      <h2>Ready to Stop Losing Hair and Start <em>Gaining Confidence?</em></h2>
-      <p>Book your free consultation today. No commitment. No pressure.</p>
+      <h2>Ready to Stop Losing Hair and Start <em style="color:var(--gold);font-style:normal;">Gaining Confidence?</em></h2>
+      <p style="font-size:1.1rem;color:#9ab0cc;margin:16px 0 36px;">Book your free consultation today. No commitment. No pressure.</p>
       <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" style="font-size:1.15rem;padding:18px 44px;" target="_blank">📲 Message Us on WhatsApp</a>
       <p style="margin-top:20px;font-size:0.9rem;color:#6a88aa;">New City Medical Plaza, Interior 708, Piso 7, Tijuana · English-speaking team</p>
     </div>
@@ -342,7 +305,7 @@
 
   <footer>
     <p>SMP Tijuana · New City Medical Plaza, Interior 708, Piso 7, Tijuana, Baja California, Mexico</p>
-    <p style="margin-top:8px;">5 minutes from San Ysidro · <a href="https://wa.me/526642190802">WhatsApp Us</a></p>
+    <p style="margin-top:8px;">5 minutes from San Ysidro · <a href="https://wa.me/526642190802" style="color:var(--gold);">WhatsApp Us</a></p>
     <p style="margin-top:12px;font-size:0.8rem;">© 2026 SMP Tijuana. All rights reserved.</p>
   </footer>
 
@@ -352,4 +315,4 @@
   </a>
 
 </body>
-      </html>
+</html>
