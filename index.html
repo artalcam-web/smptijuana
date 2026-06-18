@@ -112,11 +112,21 @@
       font-size: 13px; color: #aaa; margin-bottom: 28px; line-height: 1.6;
     }
     @media (max-width: 680px) {
-      .hero { min-height: 520px; }
-      .hero-portrait { width: 100%; opacity: 0.25; }
-      .hero-overlay { width: 100%; background: linear-gradient(to bottom, rgba(10,10,10,0.4) 0%, #0a0a0a 65%); }
-      .hero-content { max-width: 100%; }
-      .hero-price { font-size: 80px; }
+      .hero { flex-direction: column; min-height: auto; align-items: stretch; }
+      .hero-portrait {
+        position: relative; width: 100%; height: 340px;
+        object-fit: cover; object-position: center 15%; opacity: 1; z-index: 1;
+      }
+      .hero-overlay { display: none; }
+      .hero-content {
+        position: relative; z-index: 3; max-width: 100%;
+        padding: 36px 24px 40px; text-align: center; background: #0a0a0a;
+      }
+      .hero-divider { margin: 14px auto 18px; }
+      .hero-price { font-size: 84px; }
+      .hero-promo { display: block; text-align: center; }
+      .hero-cta-group { flex-direction: column; align-items: center; gap: 12px; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 300px; text-align: center; }
     }
     .badge {
       display: inline-block; background: var(--gold); color: #fff; padding: 6px 18px;
