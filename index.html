@@ -25,6 +25,7 @@
   <meta property="og:image:alt" content="Scalp Micropigmentation results at SMP Tijuana" />
   <link rel="canonical" href="https://smptijuana.com/" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --gold: #C9A84C; --dark: #0F1B2D; --navy: #1F3864; --light-bg: #F5F7FA; --text: #222; --muted: #666; }
@@ -87,6 +88,8 @@
     .directions-btn { display: inline-block; margin-top: 20px; background: var(--gold); color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; }
     .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
     .why-card { background: #fff; border-radius: 12px; padding: 28px 24px; border-left: 4px solid var(--gold); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .card-icon { width: 48px; height: 48px; background: rgba(201,168,76,0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .btn-icon { display: inline-flex; align-items: center; gap: 9px; }
     .testimonials-section { background: var(--light-bg); }
     .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
     .testimonial { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
@@ -113,8 +116,8 @@
     .price-card.featured .location { color: #6a88aa; }
     .savings-callout { background: linear-gradient(135deg, var(--dark), #1a2f50); color: #fff; border-radius: 16px; padding: 36px 40px; text-align: center; }
     .savings-callout .big { font-size: 2rem; font-weight: 900; color: var(--gold); margin-bottom: 12px; }
-    .btn-primary { background: var(--gold); color: #fff; padding: 16px 36px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; text-decoration: none; display: inline-block; }
-    .btn-secondary { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); padding: 16px 36px; border-radius: 8px; font-size: 1.05rem; font-weight: 600; text-decoration: none; display: inline-block; }
+    .btn-primary { background: var(--gold); color: #fff; padding: 16px 36px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+    .btn-secondary { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); padding: 16px 36px; border-radius: 8px; font-size: 1.05rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
     @media (max-width: 680px) {
       .hero { flex-direction: column; min-height: auto; align-items: stretch; }
       .hero-portrait { position: relative; width: 100%; height: 340px; object-fit: cover; object-position: center 15%; opacity: 1; z-index: 1; }
@@ -141,11 +144,14 @@
         "@type": "MedicalBusiness",
         "@id": "https://smptijuana.com/#business",
         "name": "SMP Tijuana",
-        "description": "Professional Scalp Micropigmentation clinic in Tijuana, Mexico. Starting from $699 USD. 5 minutes from San Ysidro border crossing.",
+        "description": "Professional Scalp Micropigmentation clinic in Tijuana, Mexico, serving US patients from San Diego and Southern California. Starting from $699 USD — up to 80% less than US prices. Located at New City Medical Plaza, just 5 minutes from the San Ysidro border crossing.",
         "url": "https://smptijuana.com",
         "telephone": "+526642190802",
         "priceRange": "$699 - $1499 USD",
+        "currenciesAccepted": "USD, MXN",
+        "paymentAccepted": "Cash, Credit Card",
         "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3DltPRqzBm2OiofN6qI8adrLC4u/hf_20260618_021636_e8d3fae7-5925-409f-823a-ce59fc49e7e2.png",
+        "medicalSpecialty": "Scalp Micropigmentation",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Paseo del Centenario 9580, Interior 708, Piso 7",
@@ -159,6 +165,19 @@
           "latitude": "32.5027",
           "longitude": "-117.0037"
         },
+        "areaServed": [
+          { "@type": "City", "name": "San Diego", "sameAs": "https://www.wikidata.org/wiki/Q16552" },
+          { "@type": "City", "name": "Chula Vista" },
+          { "@type": "City", "name": "National City" },
+          { "@type": "City", "name": "El Cajon" },
+          { "@type": "City", "name": "Escondido" },
+          { "@type": "City", "name": "Oceanside" },
+          { "@type": "City", "name": "Los Angeles" },
+          { "@type": "City", "name": "Imperial Beach" },
+          { "@type": "City", "name": "San Ysidro" },
+          { "@type": "State", "name": "California" },
+          { "@type": "State", "name": "Arizona" }
+        ],
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -167,8 +186,85 @@
             "closes": "17:00"
           }
         ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Scalp Micropigmentation Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Scalp Micropigmentation – Full Head Treatment",
+                "description": "Non-surgical scalp micropigmentation for hair loss, receding hairline, or bald head. Replicates the look of a freshly shaved head with micro-dots applied by a certified specialist."
+              },
+              "price": "699",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": "699",
+                "maxPrice": "1499",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Free SMP Consultation",
+                "description": "Free, no-commitment scalp micropigmentation consultation via WhatsApp or in person at New City Medical Plaza, Tijuana."
+              },
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "3",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Mike R." },
+            "reviewBody": "I was skeptical about going to Tijuana, but New City Medical Plaza is incredibly professional. I paid less than a third of what clinics in San Diego quoted me.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "locationCreated": { "@type": "City", "name": "Chula Vista, CA" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Carlos M." },
+            "reviewBody": "The crossing took 10 minutes. The team speaks perfect English.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "locationCreated": { "@type": "City", "name": "National City, CA" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "David L." },
+            "reviewBody": "I saved over $2,000 by coming here instead of a clinic in LA. The result looks completely natural.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "locationCreated": { "@type": "City", "name": "San Diego, CA" }
+          }
+        ],
         "hasMap": "https://share.google/ANuOFYcvVCBHJNTp8",
-        "sameAs": ["https://share.google/ANuOFYcvVCBHJNTp8"]
+        "sameAs": [
+          "https://share.google/ANuOFYcvVCBHJNTp8"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://smptijuana.com/#specialist",
+        "name": "Estefany Ruiz",
+        "jobTitle": "Master Scalp Micropigmentation Specialist",
+        "description": "Master Estefany Ruiz is a certified scalp micropigmentation specialist with 7 international certifications in scalp micropigmentation and advanced pigmentation techniques. She operates at New City Medical Plaza in Tijuana, Mexico, serving US patients from San Diego and Southern California.",
+        "worksFor": { "@id": "https://smptijuana.com/#business" },
+        "knowsAbout": ["Scalp Micropigmentation", "Hair Loss Treatment", "Micropigmentation", "Cosmetic Tattooing"],
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "7 International Certifications in Scalp Micropigmentation and Advanced Pigmentation Techniques"
+        }
       },
       {
         "@type": "FAQPage",
@@ -178,23 +274,15 @@
             "name": "Is it safe to visit Tijuana for SMP?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "New City Medical Plaza is steps from the San Ysidro border crossing. Thousands of US patients visit every month for medical procedures."
+              "text": "Yes. SMP Tijuana is located inside New City Medical Plaza, a certified medical complex just 5 minutes from the San Ysidro border crossing. Thousands of US patients from San Diego and Southern California visit every month for medical procedures. The building has strict hygiene and safety standards."
             }
           },
           {
             "@type": "Question",
-            "name": "How long does a scalp micropigmentation session take?",
+            "name": "How much does scalp micropigmentation cost in Tijuana compared to San Diego?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Each session takes 2–4 hours. Most clients complete their full treatment in 2–3 sessions spaced 7–10 days apart."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How much does SMP cost in Tijuana?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Starting from $699 USD. Full head treatment ranges from $699 to $1,499 USD depending on the area. Free consultation available for an exact quote."
+              "text": "Scalp micropigmentation in Tijuana starts at $699 USD at SMP Tijuana, compared to an average of $2,500 or more at clinics in San Diego or Los Angeles. Most clients save between $1,500 and $3,500 by crossing the border — for the same professional technique and equipment."
             }
           },
           {
@@ -202,7 +290,31 @@
             "name": "How do I get to SMP Tijuana from San Diego?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Drive to San Ysidro and cross the border — the clinic is 5 minutes away at New City Medical Plaza. You can also park on the US side and walk across. An Uber from the border costs approximately $3–5 USD."
+              "text": "Drive to San Ysidro and cross the border at the San Ysidro Port of Entry — the clinic is 5 minutes away at New City Medical Plaza, Interior 708, Piso 7. You can park on the US side and walk across in about 10 minutes. An Uber from the border to the clinic costs approximately $3–5 USD. From downtown San Diego, the total trip takes about 20 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Americans get SMP in Tijuana?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. SMP Tijuana specifically serves US clients from San Diego, Chula Vista, National City, El Cajon, Los Angeles, and across Southern California and Arizona. The entire team is bilingual in English and Spanish, and USD is accepted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best SMP clinic in Tijuana for Americans?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SMP Tijuana, located at New City Medical Plaza and led by Master Estefany Ruiz with 7 international certifications, is the closest certified SMP clinic to the US border in Tijuana. It is specifically designed for American patients, with English-speaking staff, USD pricing starting at $699, and a location 5 minutes from the San Ysidro crossing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a scalp micropigmentation session take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each session takes 2–4 hours. Most clients complete their full treatment in 2–3 sessions spaced 7–10 days apart. You can fit a session into a day trip from San Diego."
             }
           },
           {
@@ -210,7 +322,39 @@
             "name": "Does SMP Tijuana have English-speaking staff?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — the entire team is fully bilingual in English and Spanish."
+              "text": "Yes — the entire team at SMP Tijuana is fully bilingual in English and Spanish. You will never need to navigate a language barrier."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is scalp micropigmentation permanent?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Scalp micropigmentation is long-lasting but not permanent. Results typically last 3–5 years before a touch-up is needed, as the pigment fades gradually over time. It does not require surgery or recovery time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does scalp micropigmentation compare to a hair transplant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Scalp micropigmentation (SMP) is a non-surgical cosmetic procedure that uses micro-dots of pigment to replicate the look of hair follicles. It costs significantly less than a hair transplant (starting at $699 USD vs. $4,000–$15,000 for transplants), requires no surgery or recovery time, and delivers immediate visible results. SMP is ideal for men who prefer the shaved-head look or want to camouflage hair thinning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What cities near San Diego can I travel from to get SMP in Tijuana?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SMP Tijuana is accessible as a day trip from San Diego, Chula Vista, National City, Imperial Beach, El Cajon, La Mesa, Santee, Escondido, Oceanside, Carlsbad, and even Los Angeles. The clinic is just 20 minutes from downtown San Diego and 5 minutes from the San Ysidro border crossing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I need to cross the US-Mexico border for a medical appointment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "US citizens need a valid US passport or passport card to cross into Mexico and return to the US. No visa is required for a short medical visit to Tijuana. The crossing at San Ysidro takes 5–15 minutes on foot. You can drive or park on the US side and walk. Returning to the US may take 20–60 minutes by car, or 10–20 minutes on foot via the pedestrian crossing."
             }
           }
         ]
@@ -221,12 +365,16 @@
 </head>
 <body>
 
+  <main>
   <div class="topbar">
-    🇺🇸 → 🇲🇽 &nbsp; Just 5 minutes from the San Ysidro border crossing &nbsp;|&nbsp; Free consultation — no commitment
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-8-7-8z"/></svg>
+    US &rarr; MX &nbsp; Just 5 minutes from the San Ysidro border crossing &nbsp;|&nbsp; Free consultation — no commitment
   </div>
 
   <nav>
-    <div class="logo">SMP<span>Tijuana</span></div>
+    <div class="logo">
+      <img src="/favicon.png" alt="SMP Tijuana" style="height:38px;width:38px;object-fit:contain;filter:invert(1);margin-right:10px;vertical-align:middle;">SMP<span>Tijuana</span>
+    </div>
     <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="nav-cta" target="_blank" rel="noopener">Book Free Consultation</a>
   </nav>
 
@@ -236,25 +384,26 @@
       alt="Scalp micropigmentation result" />
     <div class="hero-overlay"></div>
     <div class="container hero-content">
+      <img src="/favicon.png" alt="SMP Tijuana logo" style="height:56px;width:56px;object-fit:contain;filter:invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(1.1);margin-bottom:18px;display:block;">
       <div class="hero-service">Scalp<br>Micropigmentation</div>
       <div class="hero-divider"></div>
       <div class="hero-price"><span class="hero-currency">$</span>699</div>
       <div class="hero-usd">USD</div>
       <div class="hero-promo">Father's Day Special</div>
-      <p class="hero-sub">📍 New City Medical Plaza · Tijuana &nbsp;|&nbsp; 5 min from San Diego<br>Save up to $3,500 vs. US prices</p>
+      <p class="hero-sub"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C" style="vertical-align:middle;margin-right:4px"><path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-8-7-8zm0 10.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 7.5 12 7.5s2.5 1.12 2.5 2.5S13.38 12.5 12 12.5z"/></svg> New City Medical Plaza · Tijuana &nbsp;|&nbsp; 5 min from San Diego<br>Save up to $3,500 vs. US prices</p>
       <div class="hero-cta-group">
-        <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" target="_blank" rel="noopener">📲 Book Free Consultation</a>
+        <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Book Free Consultation</a>
         <a href="#pricing" class="btn-secondary">See Pricing →</a>
       </div>
     </div>
   </section>
 
   <div class="trust-bar">
-    <div class="trust-item"><span>🏥</span> Certified Medical Facility</div>
-    <div class="trust-item"><span>🇺🇸</span> 5 Min from San Ysidro</div>
-    <div class="trust-item"><span>✅</span> No Surgery · No Downtime</div>
-    <div class="trust-item"><span>💬</span> English-Speaking Staff</div>
-    <div class="trust-item"><span>⭐</span> Free Consultation</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg> Certified Medical Facility</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 5 Min from San Ysidro</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No Surgery · No Downtime</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> English-Speaking Staff</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A84C" stroke="#C9A84C" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Free Consultation</div>
   </div>
 
   <!-- MASTER ESTEFANY RUIZ -->
@@ -270,11 +419,11 @@
         <div class="expert-divider"></div>
         <p class="expert-bio">Internationally trained and recognized across leading micropigmentation academies, Master Estefany combines refined technique with a meticulous eye for natural-looking results — all delivered inside one of Tijuana's most trusted medical facilities.</p>
         <div class="expert-cert-badge">
-          <span class="cert-icon">🏅</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
           <span class="cert-text"><strong>7 International Certifications</strong>in Scalp Micropigmentation &amp; Advanced Pigmentation Techniques</span>
         </div>
         <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20to%20book%20with%20Master%20Estefany" class="expert-cta" target="_blank" rel="noopener">
-          📲 Book with Master Estefany
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Book with Master Estefany
         </a>
       </div>
     </div>
@@ -284,22 +433,28 @@
   <section style="padding: 64px 40px; background: #fff;">
     <div class="container">
       <h2 class="section-title">Real Results</h2>
-      <p class="section-sub">Natural-looking scalp micropigmentation — see the transformation.</p>
-      <div style="display:flex; gap:32px; align-items:center; flex-wrap:wrap; margin-top:32px;">
-        <div style="flex:2; min-width:280px;">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3DltPRqzBm2OiofN6qI8adrLC4u/hf_20260617_212454_4da943fd-d29d-444d-9de2-9e8f9f0db64e.png"
-               alt="Scalp Micropigmentation Before and After - SMP Tijuana"
-               style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.15);" />
+      <p class="section-sub">Natural-looking scalp micropigmentation by Master Estefany Ruiz — see the transformation.</p>
+      <div style="max-width:680px; margin:36px auto 0;">
+        <div style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 12px 48px rgba(0,0,0,0.18);">
+          <img src="/smp-before-after.jpg"
+               alt="Scalp Micropigmentation Before and After - Real client result by Master Estefany Ruiz, SMP Tijuana at New City Medical Plaza."
+               style="width:100%; display:block;" />
+          <div style="position:absolute; top:16px; left:16px; background:rgba(15,27,45,0.82); color:#fff; font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:6px 14px; border-radius:4px; border-left:3px solid #C9A84C;">Real Client · SMP Tijuana</div>
         </div>
-        <div style="flex:1; min-width:220px; text-align:center;">
-          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3DltPRqzBm2OiofN6qI8adrLC4u/hf_20260617_212455_dcf18071-64c3-4b2d-80c9-cc4726e9040c.png"
-               alt="Confident man after SMP treatment - SMP Tijuana"
-               style="width:100%; max-width:320px; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.15);" />
-          <p style="margin-top:14px; font-size:0.9rem; color:var(--muted); font-style:italic;">Walk out looking and feeling sharp.</p>
+        <div style="display:flex; justify-content:center; gap:40px; margin-top:20px; flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">Before</div>
+            <div style="font-size:0.88rem; color:var(--text); margin-top:3px;">Thinning &amp; receding</div>
+          </div>
+          <div style="color:#C9A84C; font-size:1.6rem; line-height:1.2;">&#8594;</div>
+          <div style="text-align:center;">
+            <div style="font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">After</div>
+            <div style="font-size:0.88rem; color:var(--text); margin-top:3px;">Natural density restored</div>
+          </div>
         </div>
       </div>
       <div style="text-align:center; margin-top:36px;">
-        <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" target="_blank" rel="noopener">📲 Get My Free Consultation</a>
+        <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Get My Free Consultation</a>
       </div>
     </div>
   </section>
@@ -335,15 +490,16 @@
       <p class="section-sub">No long trips. No layovers. Just a quick border crossing.</p>
       <div class="location-grid">
         <div class="location-facts">
-          <div class="fact"><div class="icon-wrap">🏢</div><div><h4>New City Medical Plaza</h4><p>Interior 708, Piso 7. The premier medical building in Tijuana — and the closest certified clinic complex to the United States.</p></div></div>
-          <div class="fact"><div class="icon-wrap">🚗</div><div><h4>5 Minutes from San Ysidro</h4><p>Drive across the border or park on the US side and walk. Minutes from the busiest border crossing in the world.</p></div></div>
-          <div class="fact"><div class="icon-wrap">🌆</div><div><h4>20 Minutes from Downtown San Diego</h4><p>Easy day trip. Come in the morning, leave looking great by afternoon.</p></div></div>
-          <div class="fact"><div class="icon-wrap">🔒</div><div><h4>Safe &amp; Certified Medical Facility</h4><p>New City Medical Plaza is a certified medical complex with strict hygiene and safety standards.</p></div></div>
+          <div class="fact"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20"/><rect x="9" y="12" width="6" height="10"/><rect x="8" y="6" width="3" height="3"/><rect x="13" y="6" width="3" height="3"/></svg></div><div><h4>New City Medical Plaza</h4><p>Interior 708, Piso 7. The premier medical building in Tijuana — and the closest certified clinic complex to the United States.</p></div></div>
+          <div class="fact"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11l1.5-4.5h11L19 11"/><rect x="2" y="11" width="20" height="7" rx="1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><line x1="2" y1="15" x2="22" y2="15"/></svg></div><div><h4>5 Minutes from San Ysidro</h4><p>Drive across the border or park on the US side and walk. Minutes from the busiest border crossing in the world.</p></div></div>
+          <div class="fact"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="4" height="12"/><rect x="10" y="5" width="4" height="16"/><rect x="17" y="12" width="4" height="9"/><line x1="1" y1="21" x2="23" y2="21"/></svg></div><div><h4>20 Minutes from Downtown San Diego</h4><p>Easy day trip. Come in the morning, leave looking great by afternoon.</p></div></div>
+          <div class="fact"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h4>Safe &amp; Certified Medical Facility</h4><p>New City Medical Plaza is a certified medical complex with strict hygiene and safety standards.</p></div></div>
+          <div class="fact"><div class="icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><h4>Serving Clients from Across Southern California</h4><p>We regularly see clients from San Diego, Chula Vista, National City, El Cajon, Escondido, Oceanside, Carlsbad, Imperial Beach, La Mesa, and Los Angeles. Most make it a comfortable day trip.</p></div></div>
         </div>
         <div class="map-placeholder">
-          <div style="font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:12px;">🏢 Our Location</div>
+          <div style="font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:12px; display:flex; align-items:center; gap:8px; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20"/><rect x="9" y="12" width="6" height="10"/><rect x="8" y="6" width="3" height="3"/><rect x="13" y="6" width="3" height="3"/></svg> Our Location</div>
           <div style="color:#9ab0cc; font-size:0.95rem; line-height:1.8;">New City Medical Plaza<br>Interior 708, Piso 7<br>Tijuana, Baja California, Mexico</div>
-          <a href="https://maps.google.com/q=New+City+Medical+Plaza+Tijuana" class="directions-btn" target="_blank">🗺️ Get Directions</a>
+          <a href="https://maps.google.com/q=New+City+Medical+Plaza+Tijuana" class="directions-btn" target="_blank" style="display:inline-flex;align-items:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg> Get Directions</a>
         </div>
       </div>
     </div>
@@ -354,12 +510,12 @@
       <h2 class="section-title">Why Choose SMP Tijuana?</h2>
       <p class="section-sub">Everything US clients look for — at a fraction of the cost</p>
       <div class="why-grid">
-        <div class="why-card"><div>💰</div><h3>Up to 80% Less Than US Prices</h3><p>Same professional equipment, same technique, dramatically lower overhead.</p></div>
-        <div class="why-card"><div>🏥</div><h3>Certified Medical Building</h3><p>We operate inside New City Medical Plaza — a regulated, professional medical complex.</p></div>
-        <div class="why-card"><div>🌐</div><h3>English-Speaking Team</h3><p>Our staff speaks English fluently. No language barrier, no confusion.</p></div>
-        <div class="why-card"><div>⚡</div><h3>No Surgery. No Downtime.</h3><p>Walk in, walk out. Scalp micropigmentation is non-invasive.</p></div>
-        <div class="why-card"><div>🎯</div><h3>Natural-Looking Results</h3><p>Precision micro-dots that replicate real hair follicles.</p></div>
-        <div class="why-card"><div>📲</div><h3>Free Consultation First</h3><p>We never pressure you into a session.</p></div>
+        <div class="why-card"><div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Up to 80% Less Than US Prices</h3><p>Same professional equipment, same technique, dramatically lower overhead.</p></div>
+        <div class="why-card"><div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><h3>Certified Medical Building</h3><p>We operate inside New City Medical Plaza — a regulated, professional medical complex.</p></div>
+        <div class="why-card"><div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>English-Speaking Team</h3><p>Our staff speaks English fluently. No language barrier, no confusion.</p></div>
+        <div class="why-card"><div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>No Surgery. No Downtime.</h3><p>Walk in, walk out. Scalp micropigmentation is non-invasive.</p></div>
+        <div class="why-card"><div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="#C9A84C"/></svg></div><h3>Natural-Looking Results</h3><p>Precision micro-dots that replicate real hair follicles.</p></div>
+        <div class="why-card"><div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Free Consultation First</h3><p>We never pressure you into a session.</p></div>
       </div>
     </div>
   </section>
@@ -379,11 +535,15 @@
     <div class="container">
       <h2 class="section-title">Frequently Asked Questions</h2>
       <div class="faq-list">
-        <div class="faq-item"><h4>Is it safe to visit Tijuana?</h4><p>New City Medical Plaza is steps from the border. Thousands of US patients visit every month.</p></div>
-        <div class="faq-item"><h4>How long does a session take?</h4><p>2–4 hours per session. Most clients complete treatment in 2–3 sessions spaced 7–10 days apart.</p></div>
-        <div class="faq-item"><h4>How much does it cost?</h4><p>Starting from $699 USD. Full head treatment $699–$1,499 USD. Free consultation for exact quote.</p></div>
-        <div class="faq-item"><h4>How do I get there from San Diego?</h4><p>Drive to San Ysidro, cross the border — we're 5 minutes away. Uber from border costs ~$3–5.</p></div>
-        <div class="faq-item"><h4>Do you speak English?</h4><p>Yes — our entire team is bilingual.</p></div>
+        <div class="faq-item"><h4>Is it safe to visit Tijuana for SMP?</h4><p>Yes. Our clinic is inside New City Medical Plaza — a certified medical complex steps from the San Ysidro border. Thousands of US patients from San Diego and Southern California visit every month. The building maintains strict hygiene and safety standards.</p></div>
+        <div class="faq-item"><h4>Can Americans get SMP in Tijuana?</h4><p>Absolutely. SMP Tijuana is specifically designed for US clients from San Diego, Chula Vista, National City, El Cajon, Los Angeles, and across Southern California. Our entire team is bilingual and we accept USD.</p></div>
+        <div class="faq-item"><h4>How much does SMP cost in Tijuana vs. San Diego?</h4><p>SMP at our clinic starts at $699 USD. The average clinic in San Diego or Los Angeles charges $2,500 or more. Most clients save $1,500–$3,500 for the exact same technique and equipment.</p></div>
+        <div class="faq-item"><h4>How do I get there from San Diego?</h4><p>Drive to San Ysidro and cross at the border — we're 5 minutes away at New City Medical Plaza. Park on the US side and walk across in ~10 minutes. Uber from the border is ~$3–5. Total trip from downtown San Diego: about 20 minutes.</p></div>
+        <div class="faq-item"><h4>How long does a session take?</h4><p>2–4 hours per session. Most clients complete treatment in 2–3 sessions spaced 7–10 days apart — easy to schedule as a day trip.</p></div>
+        <div class="faq-item"><h4>Is scalp micropigmentation permanent?</h4><p>Results last 3–5 years before a touch-up is needed. No surgery, no recovery time — you walk out the same day looking sharp.</p></div>
+        <div class="faq-item"><h4>How does SMP compare to a hair transplant?</h4><p>SMP is non-surgical, costs 80–90% less than a transplant, and requires zero recovery time. It replicates the look of a freshly shaved head with micro-dots of pigment — ideal if you want immediate results without surgery.</p></div>
+        <div class="faq-item"><h4>What do I need to cross the border?</h4><p>A valid US passport or passport card. No visa required for a short medical visit to Tijuana. Walking across the pedestrian crossing takes 5–10 minutes. Return to the US typically takes 10–20 minutes on foot.</p></div>
+        <div class="faq-item"><h4>Do you speak English?</h4><p>Yes — our entire team is fully bilingual in English and Spanish. No language barrier, ever.</p></div>
       </div>
     </div>
   </section>
@@ -392,11 +552,12 @@
     <div class="container">
       <h2>Ready to Stop Losing Hair and Start <em style="color:var(--gold);font-style:normal;">Gaining Confidence?</em></h2>
       <p style="font-size:1.1rem;color:#9ab0cc;margin:16px 0 36px;">Book your free consultation today. No commitment. No pressure.</p>
-      <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" style="font-size:1.15rem;padding:18px 44px;" target="_blank">📲 Message Us on WhatsApp</a>
+      <a href="https://wa.me/526642190802?text=Hi!%20I%27d%20like%20a%20free%20SMP%20consultation" class="btn-primary" style="font-size:1.15rem;padding:18px 44px;" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Message Us on WhatsApp</a>
       <p style="margin-top:20px;font-size:0.9rem;color:#6a88aa;">New City Medical Plaza, Interior 708, Piso 7, Tijuana · English-speaking team</p>
     </div>
   </section>
 
+  </main>
   <footer>
     <p>SMP Tijuana · New City Medical Plaza, Interior 708, Piso 7, Tijuana, Baja California, Mexico</p>
     <p style="margin-top:8px;">5 minutes from San Ysidro · <a href="https://wa.me/526642190802" style="color:var(--gold);">WhatsApp Us</a></p>
