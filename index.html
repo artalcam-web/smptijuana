@@ -14,6 +14,14 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1615275313592508&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- Google Ads tag (AW-18258110551) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18258110551"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18258110551');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMP Tijuana | Scalp Micropigmentation – Steps from San Diego</title>
@@ -569,13 +577,20 @@
     <p style="margin-top:12px;font-size:0.8rem;">© 2026 SMP Tijuana. All rights reserved.</p>
   </footer>
 
-  <!-- Meta Pixel — WhatsApp click tracking -->
+  <!-- WhatsApp click tracking: Meta Pixel + Google Ads -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
         link.addEventListener('click', function() {
           if (typeof fbq === 'function') {
             fbq('track', 'Contact');
+          }
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18258110551/YiQwCNey8MIcENfQkoJE',
+              'value': 1.0,
+              'currency': 'MXN'
+            });
           }
         });
       });
